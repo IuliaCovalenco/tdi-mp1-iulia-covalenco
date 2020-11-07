@@ -1,5 +1,6 @@
 .App {
   background-color: #282c34;
+  background-image: url(C:\Users\IuliaCovalenco\Desktop\tdi-mp1-iulia-covalenco\tdi-mp1-iulia-covalenco\src\imagem\img1.png);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,18 +10,13 @@
   color: white;
 }
 
-.botao {
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  
-}
+
 
 .App-link {
   color: #61dafb;
