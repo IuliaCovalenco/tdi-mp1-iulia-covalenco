@@ -1,34 +1,56 @@
 import React, { useState, useEffect } from 'react';
-import Loading from './loading.js';
+import Loading from '../components/loading/loading.js';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import fundo from './img2.jpg';
+import Header from '../components/header';
 
-const Index = styled.ul`
-    font-size: 2rem;
-    color: black;
-    margin-left: 2rem;
-`
-const Li = styled.li`
-    weight: 35%;
-    color: black; 
-    text-decoration: none;
-    border-top: 1px solid black; 
 
-    & : active {
-      color: black;
-    }
 
-    & : visited {
-      color: black;
-    }
 
+
+  const Button = styled.button`
+        padding: 1rem;
+        background-color: transparent;
+        font-size: calc(10px + 2vmin);
+        border-style: groove;
+        
+        & : active {
+          color: black; 
+        }
+        & : visited {
+          color: black;
+        }
+        & : hover {
+          color: white; 
+        }
     
-    &:last-child {
-    border-bottom: 1px solid black;
-  }
-    `
+  `
 
-const valor = ['home', 'about', 'contacts'];
+  
+const Section = styled.section`
+        padding-top: 10rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(20px + 2vmin);
+`
+
+
+const Container = styled.section`
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(20px + 2vmin);
+        min-height: 100vh;
+        background-image: url(${fundo});
+      
+`
+
 
 export default () => {
 
@@ -44,18 +66,22 @@ export default () => {
     return(
     <>
     {!isLoading ? (
-        <>
-        <Index>
-          <Li>
-          <Link to="/paginas/ex1">Let´s Go</Link>
-          </Li>
-        </Index>
-        <button className='botao'>
-        <Link to="/paginas/ex1">Let´s Go</Link>
-        </button>
-  </>
+      <>
+      <Header />
+      <Container>
+        <Section>
+        <p>
+          EVERY TEAR SHED IS A FROP OF IMMORTALITYS
+        </p>
+        <Button>
+        <Link style={{ textDecoration: 'none' }} to="/paginas/pag1">
+          view cards
+          </Link>
+        </ Button>
+        </Section> 
+        </Container>
+        </>
     )
-
       :  <Loading />}
     </>
 
