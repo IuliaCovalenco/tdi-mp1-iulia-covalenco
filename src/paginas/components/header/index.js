@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, BrowserRouter, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from './logo.png';
 import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,46 +15,22 @@ const renderHomeHeader = () => (
   <Header>
      <Navbar bg="dark" expand="md, lg" fixed="top" variant="dark" >
         <Navbar.Brand>
-        <BrowserRouter>
-            <Link to="/">
+          <Link to="/">
             <img src={logo} width="40%" alt="logo" />
-            </Link>
-        </BrowserRouter>
+          </Link>
         </Navbar.Brand>
         <Nav className="mr-auto, justify-content-end, flex-row"> 
-        <BrowserRouter>
-            <Nav.Link className="pr-5" to="/">Home</Nav.Link>
-            <Nav.Link className="pr-5" to="/">Cards</Nav.Link>
-            <Nav.Link className="pr-5" to="/">Contactos</Nav.Link>
-        </BrowserRouter>
+          <Nav.Link className="pr-5" href="/">Home</Nav.Link>
+          <Nav.Link className="pr-5" href="/paginas/pag1">Cards</Nav.Link>
+          <Nav.Link className="pr-5" href="/paginas/about">About</Nav.Link>
+          <Nav.Link className="pr-5" href="/paginas/cart1">Contacts</Nav.Link>          
         </Nav>
         </Navbar>
   </Header>
   </>
 );
 
-const renderHeader = () => (
-  <>
-  <Header>
-     <Navbar bg="dark" expand="md, lg" fixed="top" variant="dark" >
-        <Navbar.Brand>
-        <BrowserRouter>
-            <Link to="/">
-            <img src={logo} width="40%" alt="logo" />
-            </Link>
-        </BrowserRouter>
-        </Navbar.Brand>
-        <Nav className="mr-auto, justify-content-end, flex-row"> 
-        <BrowserRouter>
-            <Nav.Link className="pr-5" to="/">Home</Nav.Link>
-            <Nav.Link className="pr-5" to="/">Cards</Nav.Link>
-            <Nav.Link className="pr-5" to="/">Contactos</Nav.Link>
-        </BrowserRouter>
-        </Nav>
-        </Navbar>
-  </Header>
-  </>
-);
+
 
 
 export default () => {
@@ -65,7 +41,7 @@ export default () => {
       <Header>
           {isHome
           ? renderHomeHeader()
-      : renderHeader()
+      : renderHomeHeader()
       }
       </Header>
   )

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Loading from '../components/loading/loading.js';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import fundo from './img2.jpg';
+import fundo from './img2.png';
 import Header from '../components/header';
 
 
@@ -10,20 +10,17 @@ import Header from '../components/header';
 
 
   const Button = styled.button`
-        padding: 1rem;
+        margin: 1rem;
         background-color: transparent;
         font-size: calc(10px + 2vmin);
-        border-style: groove;
+        border-style: none;
         
-        & : active {
-          color: black; 
-        }
-        & : visited {
-          color: black;
-        }
         & : hover {
-          color: white; 
+          background-color: #7f5e67; 
         }
+       
+        
+        
     
   `
 
@@ -58,7 +55,7 @@ export default () => {
 
     const loadValor = () => {
         setIsLoading(true)
-        setTimeout(() => setIsLoading(false), 2500)
+        setTimeout(() => setIsLoading(false), 500)
       }
   
       useEffect(loadValor, [])
@@ -74,7 +71,7 @@ export default () => {
           EVERY TEAR SHED IS A FROP OF IMMORTALITYS
         </p>
         <Button>
-        <Link style={{ textDecoration: 'none' }} to="/paginas/pag1">
+        <Link style={{ textDecoration: 'none', color: 'white', padding: '1rem'}} to="/paginas/pag1">
           view cards
           </Link>
         </ Button>
