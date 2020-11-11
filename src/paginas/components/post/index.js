@@ -4,14 +4,13 @@ import Col from "react-bootstrap/esm/Col";
 import '../../../App.css';
 import Button from 'react-bootstrap/Button';
 import { CardDeck } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 
 
 
 
-export default ({ name, layout, cmc, gameFormat,  artist }) => (
-  
-
+export default ({ name, layout, cmc, gameFormat, artist, key }) => (
   <Col lg={4} className="mt-5"> 
   <Card className="card h-100" style={{width: '23rem', color: 'black'}}>
   <CardDeck>
@@ -23,7 +22,9 @@ export default ({ name, layout, cmc, gameFormat,  artist }) => (
           <Card.Text>{artist}</Card.Text>
       </Card.Body>
       </CardDeck>
-      <Button href="/" style={{margin: '00.2rem' }} variant="outline-dark" fluid >See More</Button>
+      <Link to={`/cards/${key}`} size="lg" ><Button size="lg" variant="outline-dark" style={{margin: '0.rem', width: '99.9%' }} fluid >
+        See More 
+      </Button></Link>
   </Card>
 </Col>
 )

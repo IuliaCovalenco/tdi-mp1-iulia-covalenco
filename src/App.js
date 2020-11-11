@@ -6,8 +6,8 @@ import './App.css';
 import pag1 from './paginas/pag1';
 import about from './paginas/about';
 import cart1 from './paginas/cart1';
-
-
+/*import cards from './paginas/components/post/cards'
+<Route exact path="/cards/:cardId" component={cards} />*/
 
 
 const Container = styled.main`
@@ -26,6 +26,7 @@ function App() {
           <Route exact path="/paginas/pag1" component={pag1} />
           <Route exact path="/paginas/about" component={about} />
           <Route exact path="/paginas/cart1" component={cart1} />
+        
         </Switch>
       </Router>
     </Container>

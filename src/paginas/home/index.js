@@ -17,14 +17,10 @@ import Header from '../components/header';
         
         & : hover {
           background-color: #7f5e67; 
-        }
-       
-        
-        
+        }    
     
   `
 
-  
 const Section = styled.section`
         padding-top: 10rem;
         text-align: center;
