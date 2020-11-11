@@ -6,6 +6,7 @@ import { getPosts } from '../../store/posts/actions';
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Footer from '../components/footer/footer';
+import Search from '../components/search'
 
 
 
@@ -43,6 +44,7 @@ if (isError) {
       {!isLoading ? (
         <>
         <Container>
+          <Search/>
         <Row className="mt-5">{posts.map(renderPost)}</Row>
         </Container>
         <Footer />
