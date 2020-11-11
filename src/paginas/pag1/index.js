@@ -5,8 +5,8 @@ import Loading from '../components/loading/loading.js';
 import { getPosts } from '../../store/posts/actions';
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
-import Image from 'react-bootstrap/Image';
-import Footer from '../components/footer'
+import Footer from '../components/footer/footer';
+
 
 
 
@@ -43,10 +43,9 @@ if (isError) {
       {!isLoading ? (
         <>
         <Container>
-        <Image src="../../home/img2.png" fluid />
         <Row className="mt-5">{posts.map(renderPost)}</Row>
-        <Footer style={{marginBotton: '0' }}/>
         </Container>
+        <Footer />
         </>
       ) : <Loading />}
     </section>

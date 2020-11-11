@@ -25,6 +25,7 @@ const Container = styled.main`
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    
 `
 const Cool = styled.article`
     
