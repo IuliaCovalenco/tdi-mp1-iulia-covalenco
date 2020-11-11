@@ -1,8 +1,9 @@
-import { fetchPosts } from '../../../../../api/posts.js';
+import { fetchPosts } from '../../../api/posts.js';
 import {
   POSTS_FETCH_START,
   POSTS_FETCH_SUCCESS,
-  POSTS_FETCH_FAILURE
+  POSTS_FETCH_FAILURE,
+
 } from './constants';
 
 export const getPosts = () => {
@@ -12,6 +13,7 @@ export const getPosts = () => {
     fetchPosts()
       .then(cards => {
         dispatch({ type: POSTS_FETCH_SUCCESS, payload: cards.cards })
+        
       })
       .catch(() => dispatch({ type: POSTS_FETCH_FAILURE }))
   }

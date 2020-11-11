@@ -5,6 +5,7 @@ import img from '../imagem/img4.jpg';
 /*import Container from 'react-bootstrap/esm/Container'*/
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
+import Footer from '../components/footer'
 
 
 
@@ -17,6 +18,7 @@ justify-content: center;
 font-size: calc(20px + 2vmin);
 min-height: 40vh;
 min-width: 100vw;
+
 background-image: url(${img});
 `
 
@@ -50,6 +52,8 @@ software Magic: The Gathering Online or other video games such as Magic: The Gat
 constructed and limited. Limited formats involve players building a deck spontaneously out of a pool of random cards with a minimum deck size of 40 cards; in constructed formats,
  players create decks from cards they own, usually with a minimum of 60 cards per deck.</Col>
             </Row>
+            <Footer style={{ position: 'absolute'}} />
         </Container>
+        
     )
 }

@@ -22,8 +22,7 @@ const renderHomeHeader = () => (
         <Nav className="mr-auto, justify-content-end, flex-row"> 
           <Nav.Link className="pr-5" href="/">Home</Nav.Link>
           <Nav.Link className="pr-5" href="/paginas/pag1">Cards</Nav.Link>
-          <Nav.Link className="pr-5" href="/paginas/about">About</Nav.Link>
-          <Nav.Link className="pr-5" href="/paginas/cart1">Contacts</Nav.Link>          
+          <Nav.Link className="pr-5" href="/paginas/about">About</Nav.Link>          
         </Nav>
         </Navbar>
   </Header>
