@@ -2,7 +2,7 @@ import {
   POSTS_FETCH_START,
   POSTS_FETCH_SUCCESS,
   POSTS_FETCH_FAILURE,
-  POSTS_SEARCH
+  
 } from '../actions/constants';
 
 const initialState = {
@@ -33,13 +33,6 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         isLoading: false,
         isError: true,
-      };
-
-    case POSTS_SEARCH:
-      return {
-        ...state,
-        text: state.payload,
-        loading:false
       };
 
     default:

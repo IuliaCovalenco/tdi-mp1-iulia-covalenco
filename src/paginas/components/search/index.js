@@ -2,18 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import {
-    postsSearch,
-    getPosts,
-  } from '../../../store/posts/actions/index';
+    searchCard,
+    fetchCards,
+    setLoading
+  } from '../../../store/posts/actions/search.js';
 
   export class SearchForm extends Component {
     onChange = (e) => {
-      this.props.postsSearch(e.target.value);
+      this.props.searchCard(e.target.value);
     };
   
     onSubmit = (e) => {
       e.preventDefault();
-      this.props.getPosts(this.props.text);
+      this.props.fetchCards(this.props.text);
+      this.props.setLoading();
     };
   
     render() {
@@ -47,5 +49,5 @@ import {
   
   export default connect(
     mapStateToProps,
-    { postsSearch, getPosts }
+    { searchCard, fetchCards, setLoading }
   )(SearchForm);

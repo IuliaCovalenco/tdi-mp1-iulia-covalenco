@@ -1,9 +1,9 @@
 import { fetchPosts } from '../../../api/posts.js';
+
 import {
   POSTS_FETCH_START,
   POSTS_FETCH_SUCCESS,
   POSTS_FETCH_FAILURE,
-  POSTS_SEARCH
 
 } from './constants';
 
@@ -19,9 +19,3 @@ export const getPosts = () => {
       .catch(() => dispatch({ type: POSTS_FETCH_FAILURE }))
   }
 }
-export const postsSearch = text => dispatch => {
-  dispatch({
-    type: POSTS_SEARCH,
-    payload: text
-  });
-};

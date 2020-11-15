@@ -6,7 +6,9 @@ import { getPosts } from '../../store/posts/actions';
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Footer from '../components/footer/footer';
-import Search from '../components/search'
+import Search from '../components/search';
+
+
 
 
 
@@ -17,11 +19,15 @@ const renderPost = (props) =>
 export default () => {
   const dispatch = useDispatch();
 
+  
+
   const isError = useSelector(state => state.cards.isError);
   const isLoading = useSelector(state => state.cards.isLoading);
   const posts = useSelector(state => state.cards.cards);
 
   console.log(posts);
+
+
 
   useEffect(() => {
     if (posts.length) {
@@ -44,6 +50,7 @@ if (isError) {
       {!isLoading ? (
         <>
         <Container>
+        
           <Search/>
         <Row className="mt-5">{posts.map(renderPost)}</Row>
         </Container>
@@ -53,4 +60,10 @@ if (isError) {
     </section>
 
   )
+  
 }
+
+
+
+
+
